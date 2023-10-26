@@ -33,7 +33,7 @@ function solution(num_list) {
 // 03. 중복된 숫자 개수
 
 function solution(array, n) {
-  const filteredArray = array.filter((element) => element === n);
+  let filteredArray = array.filter((element) => element === n);
 
   return filteredArray.length;
 }

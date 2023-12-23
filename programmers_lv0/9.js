@@ -142,3 +142,31 @@ function solution(letter) {
   }
   return answer;
 }
+
+//05. 가위 바위 보
+
+// 내방법
+function solution(rsp) {
+  let result = '';
+  for (i = 0; i < rsp.length; i++) {
+    if (rsp[i] === '2') {
+      result += 0;
+    } else if (rsp[i] === '0') {
+      result += 5;
+    } else {
+      result += 2;
+    }
+  }
+  return result;
+}
+
+// 기타 내장함수를 사용한 좋은방법
+function solution(rsp) {
+  let arr = {
+    2: 0,
+    0: 5,
+    5: 2,
+  };
+  var answer = [...rsp].map((v) => arr[v]).join('');
+  return answer;
+}

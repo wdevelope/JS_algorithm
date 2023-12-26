@@ -170,3 +170,16 @@ function solution(rsp) {
   var answer = [...rsp].map((v) => arr[v]).join('');
   return answer;
 }
+
+//06. 구슬을 나누는 경우의 수
+function factorial(n) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+function solution(balls, share) {
+  return Math.round(factorial(balls) / (factorial(share) * factorial(balls - share)));
+}
